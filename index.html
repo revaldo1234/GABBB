@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co.com/R41yrzB/gab.jpeg" type="image/x-icon">
+    <title>LOVE UNTUK ANAK UNPRI GABLIU ANJAY
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="surat-container" style="position:fixed;top:0;left:0;width:100%;text-align:center;z-index:300;">
+        <button id="toggle-surat" class="surat-btn" style="margin-top:18px;">
+            💌 <span id="surat-btn-text">Buka Surat</span>
+        </button>
+        <div id="surat" style="display:none;margin:18px auto 0 auto;max-width:340px;background:rgba(255,182,193,0.95);border-radius:18px;box-shadow:0 4px 24px #ff69b4;padding:22px 18px;color:#fff;font-size:1.15em;font-family:'Segoe UI',Arial,sans-serif;line-height:1.5;">
+            Dear Gab,<br><br>
+            ACTUALLY WA SUKA CHAM LU ANJAY TAPI KAYANYA ANDA SUDAH TAU,WA CUMA MAU BILANG AJA SI BIAR LEGA MWEHEHE<br>
+            TAKPAPA KALAU ANDA TIDAK MERASAKAN HAL YANG SAMA, YANG PENTING WA SUDAH NGOMONG<br>
+            JANGAN ASING GES SESUDAH BACA INI<br><br>
+            KEMARIN DI KERETA API WA TIDAK ADA TOPIK,MAKSIH SBUX NYA WA JADI TIDAK ENAK TETAPI TERIMA KASIH,KALAU ANDA TIDAK MEMBALAS ITU JUGA LEBIH BAIK,TERIMA KASIH<br>
+            WA CAI WALANG KAWANAN ANE LAMA LIAU,PASTI ANDA TIDAK MENGESPEK
+        </div>
+    </div>
+    <div class="front-text">
+        <p>
+            <span style="font-size:1.5em;font-weight:bold;color:#f9f9f9;text-shadow:0 2px 8px #fff;">
+                HALO GAB I WANT SAY SOMETHING FOR YOU,BUKA SURATNYA YA
+            </span><br>
+        </p>
+    </div>
+    <div class="container">
+        <div class="front">
+            <div class="front-left"></div>
+            <div class="front-right"></div>
+            <img src="assets/gabb.jpeg" class="love" style="display:block;">
+        </div>
+        <div class="back">
+            <div class="back-left"></div>
+            <div class="back-right"></div>
+            <img src="assets/gabliu.jpeg" class="love-back" style="display:block;">
+        </div>
+        <audio id="audio" src="assets/audio.mp3" preload="auto" loop></audio>
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <div class="left-piece"></div>
+        <div class="left-piece2"></div>
+        <div class="left-piece3"></div>
+        <div class="left-piece4"></div>
+        <div class="left-piece5"></div>
+        <div class="left-piece6"></div>
+        <div class="left-piece7"></div>
+        <div class="left-piece8"></div>
+        <div class="left-piece9"></div>
+        <div class="left-piece10"></div>
+        <div class="left-piece11"></div>
+        <div class="left-piece12"></div>
+        <div class="left-piece13"></div>
+        <div class="left-piece14"></div>
+        <div class="left-piece15"></div>
+        <div class="left-piece16"></div>
+        <div class="left-piece17"></div>
+        <div class="left-piece18"></div>
+        <div class="left-piece19"></div>
+        <div class="left-piece20"></div>
+        <div class="left-piece21"></div>
+        <div class="left-piece22"></div>
+        <div class="left-piece23"></div>
+        <div class="right-piece"></div>
+        <div class="right-piece2"></div>
+        <div class="right-piece3"></div>
+        <div class="right-piece4"></div>
+        <div class="right-piece5"></div>
+        <div class="right-piece6"></div>
+        <div class="right-piece7"></div>
+        <div class="right-piece8"></div>
+        <div class="right-piece9"></div>
+        <div class="right-piece10"></div>
+        <div class="right-piece11"></div>
+        <div class="right-piece12"></div>
+        <div class="right-piece13"></div>
+        <div class="right-piece14"></div>
+        <div class="right-piece15"></div>
+        <div class="right-piece16"></div>
+        <div class="right-piece17"></div>
+        <div class="right-piece18"></div>
+        <div class="right-piece19"></div>
+        <div class="right-piece20"></div>
+        <div class="right-piece21"></div>
+        <div class="right-piece22"></div>
+        <div class="right-piece23"></div>
+    </div>
+    <div style="position:fixed;bottom:30px;left:0;width:100%;text-align:center;z-index:200;">
+        <button id="toggle-audio" class="pretty-btn audio-btn">
+            <span class="icon">▶</span> <span class="text">Play Music</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Surat buka/tutup
+        const suratBtn = document.getElementById('toggle-surat');
+        const surat = document.getElementById('surat');
+        const suratBtnText = document.getElementById('surat-btn-text');
+        suratBtn.addEventListener('click', function () {
+            surat.style.display = surat.style.display === "none" ? "block" : "none";
+            suratBtnText.textContent = surat.style.display === "block" ? "Tutup Surat" : "Buka Surat";
+        });
+
+        // Audio play/pause
+        const audio = document.getElementById('audio');
+        const toggleBtn = document.getElementById('toggle-audio');
+        const iconSpan = toggleBtn.querySelector('.icon');
+        const textSpan = toggleBtn.querySelector('.text');
+        toggleBtn.addEventListener('click', function () {
+            if (audio.paused) {
+                audio.play();
+                iconSpan.textContent = '⏸';
+                textSpan.textContent = 'Pause Music';
+            } else {
+                audio.pause();
+                iconSpan.textContent = '▶';
+                textSpan.textContent = 'Play Music';
+            }
+        });
+    </script>
+</body>
+
+</html>
